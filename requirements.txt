@@ -1,0 +1,10 @@
+alibabacloud-credentials
+alibabacloud-ecs20140526
+alibabacloud-endpoint-util
+alibabacloud-openapi-util
+alibabacloud-tea
+alibabacloud-tea-openapi
+alibabacloud-tea-util
+aliyun-python-sdk-core
+aliyun-python-sdk-ecs
+cffi
