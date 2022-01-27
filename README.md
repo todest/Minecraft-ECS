@@ -9,3 +9,7 @@
 ## 销毁
 
 - DeleteECS
+
+## 查询
+
+- QueryECS
