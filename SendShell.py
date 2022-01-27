@@ -86,6 +86,7 @@ if __name__ == '__main__':
         #     os.system('cls')
         #     print('当前IP: %s' % now_ip)
         os.system('ssh-keygen -R mc.todest.cn')
+        os.system('ssh -o StrictHostKeyChecking=no root@mc.todest.cn :')
         if platform.platform().startswith('Windows'):
             os.system("pause")
     else:

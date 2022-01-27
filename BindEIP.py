@@ -51,5 +51,6 @@ class BindEIP:
 if __name__ == '__main__':
     print(json.dumps(BindEIP.main(QueryECS.GetOneECS.get_instance_id()).to_map(), indent=4))
     os.system('ssh-keygen -R mc.todest.cn')
+    os.system('ssh -o StrictHostKeyChecking=no root@mc.todest.cn :')
     if platform.platform().startswith('Windows'):
         os.system('pause')
