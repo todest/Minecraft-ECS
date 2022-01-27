@@ -58,7 +58,7 @@ class RunOnECS:
 
 
 if __name__ == '__main__':
-    if platform.platform().startswith('Windows') and is_admin():
+    if not platform.platform().startswith('Windows') or is_admin():
         print('正在等待NAS挂载...')
         while True:
             output = RunOnECS.main("""cat .init.sh""").to_map()
