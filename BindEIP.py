@@ -1,5 +1,6 @@
 import json
 import os
+import platform
 
 from alibabacloud_ecs20140526 import models as ecs_20140526_models
 from alibabacloud_ecs20140526.client import Client as Ecs20140526Client
@@ -50,4 +51,5 @@ class BindEIP:
 if __name__ == '__main__':
     print(json.dumps(BindEIP.main(QueryECS.GetOneECS.get_instance_id()).to_map(), indent=4))
     os.system('ssh-keygen -R mc.todest.cn')
-    os.system('pause')
+    if platform.platform().startswith('Windows'):
+        os.system('pause')

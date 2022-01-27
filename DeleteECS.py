@@ -1,5 +1,6 @@
 import json
 import os
+import platform
 
 from alibabacloud_ecs20140526 import models as ecs_20140526_models
 from alibabacloud_ecs20140526.client import Client as Ecs20140526Client
@@ -43,4 +44,5 @@ class DeleteOneECS:
 
 if __name__ == '__main__':
     print(json.dumps(DeleteOneECS.main().to_map(), indent=4, ensure_ascii=False))
-    os.system("pause")
+    if platform.platform().startswith('Windows'):
+        os.system("pause")

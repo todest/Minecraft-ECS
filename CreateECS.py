@@ -1,5 +1,6 @@
-import os
 import json
+import os
+import platform
 import time
 import traceback
 
@@ -169,4 +170,5 @@ class AliyunRunInstancesExample(object):
 
 if __name__ == '__main__':
     AliyunRunInstancesExample().run()
-    os.system("pause")
+    if platform.platform().startswith('Windows'):
+        os.system("pause")

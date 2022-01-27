@@ -1,8 +1,8 @@
 import ctypes
 import json
 import os
+import platform
 import sys
-import time
 
 from alibabacloud_ecs20140526 import models as ecs_20140526_models
 from alibabacloud_ecs20140526.client import Client as Ecs20140526Client
@@ -58,7 +58,7 @@ class RunOnECS:
 
 
 if __name__ == '__main__':
-    if is_admin():
+    if platform.platform().startswith('Windows') and is_admin():
         print('正在等待NAS挂载...')
         while True:
             output = RunOnECS.main("""cat .init.sh""").to_map()
@@ -86,7 +86,8 @@ if __name__ == '__main__':
         #     os.system('cls')
         #     print('当前IP: %s' % now_ip)
         os.system('ssh-keygen -R mc.todest.cn')
-        os.system("pause")
+        if platform.platform().startswith('Windows'):
+            os.system("pause")
     else:
         if sys.version_info[0] == 3:
             ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, __file__, None, 1)
