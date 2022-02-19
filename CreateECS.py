@@ -32,7 +32,7 @@ class AliyunRunInstancesExample(object):
         # 实例的计费方式
         self.instance_charge_type = 'PostPaid'
         # 镜像ID
-        self.image_id = 'aliyun_2_1903_x64_20G_qboot_alibase_20211216.vhd'
+        self.image_id = 'aliyun_3_x64_20G_qboot_alibase_20211214.vhd'
         # 指定新创建实例所属于的安全组ID
         self.security_group_id = 'sg-wz9hz64mlta3qngv2y86'
         # ecs.api.generator.run_instances_resourceGroupId
